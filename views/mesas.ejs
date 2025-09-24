@@ -1,0 +1,12 @@
+<h2>Mesas</h2>
+<form method="POST" action="/mesas/add">
+  <input type="number" name="numero" placeholder="Número" required>
+  <input type="number" name="capacidad" placeholder="Capacidad" required>
+  <button type="submit">Agregar</button>
+</form>
+<ul>
+  <% mesas.forEach(m => { %>
+    <li>Mesa <%= m.numero %> - Capacidad: <%= m.capacidad %> - Estado: <%= m.estado %></li>
+  <% }) %>
+</ul>
+<a href="/dashboard">Volver</a>

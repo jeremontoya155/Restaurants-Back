@@ -1,0 +1,14 @@
+<h2>Empleados</h2>
+<form method="POST" action="/empleados/add">
+  <input type="text" name="nombre" placeholder="Nombre" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="text" name="telefono" placeholder="Teléfono">
+  <input type="text" name="rol" placeholder="Rol" value="empleado">
+  <button type="submit">Agregar</button>
+</form>
+<ul>
+  <% empleados.forEach(e => { %>
+    <li><%= e.nombre %> - <%= e.email %> - <%= e.rol %></li>
+  <% }) %>
+</ul>
+<a href="/dashboard">Volver</a>
